@@ -63,7 +63,7 @@ unsigned int Span::longestSpan(void)
 {
 	if (this->_content.size() < 2)
 		throw Span::NoSpanPossibleException();
-	return (*max_element(this->_content.begin(), this->_content.end() - *min_element(this->_content.begin(), this->_content.end())));
+	return (*max_element(this->_content.begin(), this->_content.end()) - *min_element(this->_content.begin(), this->_content.end()));
 }
 
 void Span::fillSpan(std::vector<int>::iterator begin, std::vector<int>::iterator end)

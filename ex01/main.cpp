@@ -40,8 +40,8 @@ int main(void)
 		for (int i = 0; i < 25; i++)
 		{
 			int nbr = rand() % 100 + 1;
-			mySpan.addNumber(nbr);
-			std::cout << "mySpan[" << i << "]: " << nbr << std::endl;
+			mySpan.addNumber(nbr - 100);
+			std::cout << "mySpan[" << i << "]: " << nbr - 100 << std::endl;
 		}
 		std::cout << "longest: " << mySpan.longestSpan() << std::endl;
 		std::cout << "shortest: " << mySpan.shortestSpan() << std::endl;
@@ -65,6 +65,12 @@ int main(void)
 		}
 		std::cout << "longest: " << mySpan.longestSpan() << std::endl;
 		std::cout << "shortest: " << mySpan.shortestSpan() << std::endl;
+
+		// std::cout << std::string(60, '-') << std::endl;
+		// std::cout << "Test in a test: " << std::endl;
+		// std::cout << "	fillSpan function" << std::endl;
+		// Span mySpan2;
+		// mySpan2.fillSpan(mySpan._content.begin(), mySpan._content.end());
 	}
 	catch(const std::exception& e)
 	{
@@ -83,5 +89,20 @@ int main(void)
 	{
 		std::cerr << e.what() << std::endl;
 	}
-	
+	std::cout << std::string(60, '-') << std::endl;
+	std::cout << "MAXINT and MININT" << std::endl;
+	std::cout << "	TEST" << std::endl;
+	try
+	{
+		Span mySpan(2);
+		mySpan.addNumber(2147483647);
+		mySpan.addNumber(-2147483648);
+		std::cout << "longest: " << mySpan.longestSpan() << std::endl;
+		std::cout << "shortest: " << mySpan.shortestSpan() << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+	return (0);
 }

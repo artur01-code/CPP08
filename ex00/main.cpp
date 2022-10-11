@@ -12,7 +12,7 @@ int main(void)
 		vector.push_back(i);
 		list.push_back(i);
 	}
-	std::cout << "trying to find 0 to 11 in list" << std::endl;
+	std::cout << "trying to find 1 to 11 in list" << std::endl;
 	for (int i = 1; i < 12; i++)
 	{
 		try
@@ -25,7 +25,7 @@ int main(void)
 		}
 	}
 	std::cout << std::string(50, '-') << std::endl;
-	std::cout << "trying to find 0 to 11 in vector" << std::endl;
+	std::cout << "trying to find 1 to 11 in vector" << std::endl;
 	for (int i = 1; i < 12; i++)
 	{
 		try

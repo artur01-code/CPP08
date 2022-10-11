@@ -2,10 +2,13 @@
 
 int main(void)
 {
+	std::stack<int> krisi;
+	
 	std::cout << std::string(60, '-') << std::endl;
 	std::cout << "my own std::stack iterator container " << std::endl;
 	{
 		MutantStack<int> mystack;
+		MutantStack<int> mystack2;
 		mystack.push(8);
 		mystack.push(12);
 		std::cout << mystack.top() << std::endl;
@@ -25,6 +28,11 @@ int main(void)
 			++it;
 		}
 		std::stack<int> s(mystack);
+
+		// mystack2 = mystack;
+		// std::cout << std::string(60, '-') << "HERE" << std::endl;
+		// std::cout << *mystack2.begin() << std::endl;
+		// std::cout << *mystack.begin() << std::endl;
 	}
 	std::cout << std::string(60, '-') << std::endl;
 	std::cout << "compare with the original library" << std::endl;

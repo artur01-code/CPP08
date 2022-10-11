@@ -50,7 +50,7 @@ int main(void)
 	{
 		std::cerr << e.what() << '\n';
 	}
-		std::cout << std::string(60, '-') << std::endl;
+	std::cout << std::string(60, '-') << std::endl;
 	std::cout << "Creating span with size of 25000 and assign random values" << std::endl;
 	std::cout << "	check for longest and shortest span" << std::endl;
 	try
@@ -69,6 +69,19 @@ int main(void)
 	catch(const std::exception& e)
 	{
 		std::cerr << e.what() << '\n';
+	}
+	std::cout << std::string(60, '-') << std::endl;
+	std::cout << "Creating a span with no elements (or one)" << std::endl;
+	std::cout << "	should throw an exception" << std::endl;
+	try
+	{
+		Span mySpan;
+		std::cout << "longest: " << mySpan.longestSpan() << std::endl;
+		std::cout << "shortest: " << mySpan.shortestSpan() << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << std::endl;
 	}
 	
 }

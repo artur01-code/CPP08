@@ -2,6 +2,7 @@
 # define EASYFIND_HPP
 
 #include <iostream>
+#include <algorithm>
 
 template<typename T>
 typename T::iterator easyFind(T &container, int target)

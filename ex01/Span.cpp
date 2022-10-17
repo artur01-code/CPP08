@@ -66,6 +66,9 @@ unsigned int Span::longestSpan(void)
 	return (*max_element(this->_content.begin(), this->_content.end()) - *min_element(this->_content.begin(), this->_content.end()));
 }
 
+/*
+overflowed when the user inputs the wrong range (f. exp. changes begin and end)
+*/
 void Span::fillSpan(std::vector<int>::iterator begin, std::vector<int>::iterator end)
 {
 	while (begin != end)

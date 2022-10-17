@@ -65,12 +65,6 @@ int main(void)
 		}
 		std::cout << "longest: " << mySpan.longestSpan() << std::endl;
 		std::cout << "shortest: " << mySpan.shortestSpan() << std::endl;
-
-		// std::cout << std::string(60, '-') << std::endl;
-		// std::cout << "Test in a test: " << std::endl;
-		// std::cout << "	fillSpan function" << std::endl;
-		// Span mySpan2;
-		// mySpan2.fillSpan(mySpan._content.begin(), mySpan._content.end());
 	}
 	catch(const std::exception& e)
 	{
@@ -99,6 +93,21 @@ int main(void)
 		mySpan.addNumber(-2147483648);
 		std::cout << "longest: " << mySpan.longestSpan() << std::endl;
 		std::cout << "shortest: " << mySpan.shortestSpan() << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+	std::cout << std::string(60, '-') << std::endl;
+	std::cout << "fillspan" << std::endl;
+	std::cout << "	TEST" << std::endl;
+		try
+	{
+		std::vector<int> vector;
+		Span mySpan(100);
+		for (int i = 0; i < 100; i++)
+			vector.push_back(i);
+		mySpan.fillSpanButBetter(vector);
 	}
 	catch(const std::exception& e)
 	{

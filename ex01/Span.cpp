@@ -79,3 +79,18 @@ void Span::fillSpan(std::vector<int>::iterator begin, std::vector<int>::iterator
 		begin++;
 	}
 }
+
+void Span::fillSpanButBetter(std::vector<int> vector)
+{
+    std::vector<int>::iterator begin, end;
+    begin = vector.begin();
+    end = vector.end();
+    while (begin != end)
+    {
+        if (this->_content.size() >= this->_N)
+            throw OutOfCapacityException();
+        this->addNumber(*begin);
+        std::cout << *begin << std::endl;
+        begin++;
+    }
+}

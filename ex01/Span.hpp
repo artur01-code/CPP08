@@ -30,7 +30,7 @@ class Span
 		unsigned int shortestSpan(void);
 		unsigned int longestSpan(void);
 		void fillSpan(std::vector<int>::iterator begin, std::vector<int>::iterator end);
-
+		void fillSpanButBetter(std::vector<int> vector);
 };
 
 #endif
